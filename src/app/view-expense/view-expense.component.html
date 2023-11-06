@@ -1,0 +1,13 @@
+<div class="btn">
+    <button id="btn1" class="btn btn-primary" (click)="viewAll()">View all Expenses</button>
+    <button id="btn2" class="btn btn-primary">View By Category</button>
+</div>
+<div id="display" *ngIf="!boolVar">
+    <div *ngFor="let item of allExpenses">
+        <div *ngFor="let obj of item | keyvalue">
+            {{obj.key}}: {{obj.value}}
+        </div>
+        <br><br>
+    </div>
+   
+</div>

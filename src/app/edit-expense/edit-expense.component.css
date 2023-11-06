@@ -1,0 +1,15 @@
+#editExp{
+    display: inline-block;
+    position: absolute;
+    top: 96px;
+    left: 285px;
+}
+
+#display{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.expenseInputs{
+    display: block;
+}

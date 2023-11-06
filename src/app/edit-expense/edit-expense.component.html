@@ -1,0 +1,39 @@
+<div id="editExp">
+    <input type="text" [(ngModel)]="category" required placeholder="Enter The category of expense">
+    <button class="btn  btn-primary" (click)="edit()">Edit</button>
+
+    <div id="display" *ngIf="!boolVar">
+        <div *ngFor="let item of editedExpense">
+            <div *ngFor="let obj of item | keyvalue">
+                <!-- <label> {{obj.key}}:  </label>
+                <input type="text" placeholder="{{obj.value}}"> -->
+                {{obj.key}}: {{obj.value}}
+                <br>
+            </div>
+            <button (click)="getValue([item])" value="{{item}}" class="btn btn-danger">Update</button>
+            <br><br>
+        </div>
+
+    </div>
+
+    <div *ngIf="!boolVarNextComponent">
+        <!-- <div *ngFor="let item of expensesToEdit">
+            <div *ngFor="let obj of item | keyvalue">
+                <label> {{obj.key}}: </label>
+                <input type="text" placeholder="{{obj.value}}">
+                <br>
+            </div>
+        </div> -->
+        <label>Amount: </label>
+        <input class="expenseInputs" id="amount" required [(ngModel)]="amount" type="number" placeholder="{{amount}}">
+        <label>Category: </label>
+        <input class="expenseInputs" id="category" required [(ngModel)]="category" type="text" placeholder="{{expensesToEdit[0].category}}">
+        <label>Description: </label>
+        <input class="expenseInputs" id="desc" required [(ngModel)]="desc" type="text" placeholder="{{expensesToEdit[0].desc}}">
+        <label>Date: </label>
+        <input class="expenseInputs" [(ngModel)]="date" required type="date" placeholder="{{expensesToEdit[0].date}}">
+        <label>{{expensesToEdit[0].date}}</label><br><br>
+        <button class="btn btn-primary" (click)="submitChange()">Submit</button>
+
+    </div>
+</div>

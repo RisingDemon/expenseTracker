@@ -1,0 +1,26 @@
+button{
+    display: inline-block;
+    margin:10px;
+    padding: 10px;
+    width: 150px;
+}
+.btn{
+    position: absolute;
+    /* margin-left: 100px; */
+}
+#btn2{
+    margin-left: 200px;
+}
+
+#display{
+    top: 140px;
+    left: 271px;
+    /* margin-left: 55px; */
+    /* margin-top: 38px; */
+    position: absolute;
+}
+
+#display{
+    margin-left: 50px;
+    margin-top: 20px;
+}

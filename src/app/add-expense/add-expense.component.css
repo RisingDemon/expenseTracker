@@ -1,0 +1,13 @@
+.expenseInputs{
+
+    display: block;
+    padding: 5px;
+    /* border-radius: 2px; */
+    margin: 5px;
+    width: 300px;
+}
+#addExpenseInput{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}

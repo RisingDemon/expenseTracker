@@ -1,0 +1,13 @@
+<div id="addExpenseInput">
+    <input class="expenseInputs" id="amount" required [(ngModel)]="amount" type="number" placeholder="Amount">
+    <input class="expenseInputs" id="category" required [(ngModel)]="category" type="text" placeholder="Category">
+    <input class="expenseInputs" id="desc" required [(ngModel)]="desc" type="text" placeholder="Description">
+    <input class="expenseInputs" [(ngModel)]="date" required type="date">
+
+
+    <!-- <div class="alert alert-danger" *ngIf="amount.touched && !amount.valid">
+            <div *ngIf="amount.errors?.['required']">Enter The Amount</div>
+        </div> -->
+
+    <button class="btn btn-primary" (click)="submitInfo()">Submit</button>
+</div>
